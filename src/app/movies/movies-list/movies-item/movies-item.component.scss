@@ -1,0 +1,23 @@
+.img-responsive {
+    max-height: 120px;
+    position: absolute
+}
+
+a {
+    cursor: pointer;
+}
+
+
+.list-group-item {
+    margin-top: 1rem;
+    height: 18rem;
+}
+
+.list-group-item:last-child {
+    margin-bottom: 1rem;
+}
+
+.summary {
+    position: relative;
+    margin-left: 10rem;
+}

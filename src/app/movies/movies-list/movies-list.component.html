@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="col-xs-12">
+      <app-movies-item *ngFor="let movieElement of movies; let i = index" 
+      [movie]="movieElement"
+      [index]="i">
+      </app-movies-item>
+  </div>
+</div>
