@@ -1,5 +1,10 @@
 <div class="row">
   <div class="col-md-12">
+      <div class="addingAmovie">
+          <p id="addExplain"> Click on Add button if you want to add more movies.</p>
+          <button (click)="addMovie = !addMovie" class="btn"> Add </button>
+      </div>       
+      <app-add-new-movie-modal [(visible)]="addMovie"> </app-add-new-movie-modal>
     <app-movies-list> </app-movies-list>  
   </div>
 </div>
