@@ -5,7 +5,7 @@ import { AboutComponent } from '../app/about/about.component';
 import { ReviewsComponent } from '../app/reviews/reviews.component';
 
 const routes: Routes = [
-  {path: 'movies', component: MoviesComponent },
+  {path: '', component: MoviesComponent },
   {path: 'about', component: AboutComponent },
   {path: 'reviews', component: ReviewsComponent }
 ];
