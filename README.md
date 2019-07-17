@@ -10,6 +10,8 @@ Small movie app. Include 3 main processes:
 2. add new movie to list.
 3. you can see reviews of the new spider-man movie
 
+Developed with Angular 7 and used the "New York Times" API movies for getting the reviews.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
