@@ -13,6 +13,10 @@
     display: flex;
 }
 
+.list-group-item:last-child {
+   margin-bottom: 1%;
+}
+
 .head-line {
     font-size: 2rem;
     font-weight: bold;

@@ -5,7 +5,7 @@ import { MovieService } from '../movies/movie.service.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
   searchValue: string;
@@ -16,12 +16,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSearchForMovie() {
-    if (this.searchValue) {
-      this.movieData = this.movieService.searchByTitle(this.searchValue);
-    } else {
-      this.movieService.getMovies();
-    }
+  onSearchForReview() {
+    this.movieService.onReviewSearch(this.searchValue);
   }
 
 }

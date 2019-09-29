@@ -15,7 +15,7 @@
             <li><a routerLink="/about" title="not implemented"> about </a></li>
             <li><a routerLink="/reviews"> Reviews </a></li>
       </ul>
-      <form class="navbar-form navbar-left" (ngSubmit)="onSearchForMovie()">
+      <form class="navbar-form navbar-left" (ngSubmit)="onSearchForReview()">
         <div class="form-group">
           <input type="text" class="form-control search__input" placeholder="Search"  name="search__movie" 
            #search__input = "ngModel"  [(ngModel)]="searchValue" />

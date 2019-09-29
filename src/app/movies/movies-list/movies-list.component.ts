@@ -29,4 +29,8 @@ export class MoviesListComponent implements OnInit, OnDestroy {
     this.igChangeSub.unsubscribe();
   }
 
+  onMoveSelect(movie){
+    console.log(movie);
+  }
+
 }

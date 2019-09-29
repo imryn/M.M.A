@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostBinding, Output, HostListener, EventEmitter } from '@angular/core';
 import { Movie } from '../../movie.modle';
 
 @Component({
@@ -8,7 +8,17 @@ import { Movie } from '../../movie.modle';
 })
 export class MoviesItemComponent implements OnInit {
   @Input() movie: Movie;
-  @Input() index: number;
+  @Output() select = new EventEmitter();
+
+  @HostBinding('class')
+  get getClass() {
+    return 'list-group-item clearfix pull-left';
+  }
+
+  @HostListener('click', ['$event'])
+  onSelect() {
+    this.select.emit(this.movie);
+  }
 
 
   constructor() { }
