@@ -12,7 +12,7 @@ export class ValidationService {
           'required': 'Required',
           'invalidImageLink': 'The link should include jpg/gif/png',
           'invalidDate': 'The year should be before / equal to current year',
-          'invalidText': 'The summery does not include spaces'
+          'invalidText': 'Too much characters in the summary'
       };
 
       return config[validatorName];
@@ -37,7 +37,7 @@ export class ValidationService {
     }
 
     static TextValidator(control) {
-      if (control.value.length <= 300 && control.value.match(/\s/) != null) {
+      if (control.value.length <= 300) {
         return null;
 
       } else {

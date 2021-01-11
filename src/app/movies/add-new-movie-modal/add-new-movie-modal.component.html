@@ -38,7 +38,7 @@
         <div class="form-group row">
             <label for="summary" class="col-sm-4 col-form-label"> Summary: <span> (not more then 300 characters) </span>  </label>
             <div class="col-sm-8">
-                <textarea class="form-control" rows="4" maxlength="300" 
+                <textarea class="form-control" rows="4" maxlength="400" 
                 formControlName="summary" > 
                 </textarea>
                 <app-control-messages class="error-message" [control]="newMovieForm.controls.summary"></app-control-messages>
@@ -46,7 +46,7 @@
             </div>
         </div>
 
-        <button type = "submit" [disabled]="!newMovieForm.valid" class="btn btn-primary contact__button"> Submit </button>
+        <button [disabled]="!newMovieForm.valid" class="btn btn-primary contact__button"> Submit </button>
     </form>    
     <button *ngIf="closable" (click)="close()" aria-label="Close" class="addMovie__close-btn">X</button>
 </div>
