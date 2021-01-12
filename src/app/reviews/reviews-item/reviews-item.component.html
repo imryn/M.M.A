@@ -2,7 +2,7 @@
   <p class="error"> {{error}} </p>
   <ul *ngIf="reviews" class="list-group" >
         <li *ngFor="let review of reviews" class="list-group-item">
-            <img src="{{review.multimedia != null ? review.multimedia.src :  reviewPlaceholder}}" class="poster" />
+            <img src="{{getReviewImg(review)}}" class="poster" />
           <div class="review-info">
               <div class="head-line">
                 <a href="{{review.link.url}}"> {{review.headline}} </a>  

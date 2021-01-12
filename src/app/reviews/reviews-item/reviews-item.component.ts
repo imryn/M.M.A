@@ -2,6 +2,7 @@ import { Component, HostBinding, Input, OnInit } from '@angular/core';
 import { ReviewService } from '../../../review.service';
 import { MovieService } from '../../../movies/movie.service.service';
 import { Subscription } from 'rxjs';
+import { Review } from '../../review.typing';
 
 @Component({
   selector: 'app-reviews-item',
@@ -10,9 +11,9 @@ import { Subscription } from 'rxjs';
 })
 export class ReviewsItemComponent implements OnInit {
 
-  reviews: object;
+  reviews: Review[];
   error: string;
-  reviewPlaceholder = 'https://m.media-amazon.com/images/G/01/imdb/images/nopicture/medium/film-3385785534._CB483791896_.png';
+  private static readonly reviewPlaceholder = 'https://m.media-amazon.com/images/G/01/imdb/images/nopicture/medium/film-3385785534._CB483791896_.png';
   onSearchSubscription: Subscription;
 
   constructor(private reviewService: ReviewService, private movieService: MovieService) {
@@ -35,6 +36,10 @@ export class ReviewsItemComponent implements OnInit {
 
   ngOnDestroy() {
     this.onSearchSubscription.unsubscribe();
+  }
+
+  getReviewImg(review: Review) {
+    return review.multimedia != null ? review.multimedia.src :  ReviewsItemComponent.reviewPlaceholder;
   }
 
 

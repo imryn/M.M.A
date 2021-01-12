@@ -11,3 +11,15 @@
     color: white;
     margin-left: 1rem;
 }
+
+@media only screen and (max-width: 480px){
+
+    .addingAmovie {
+        margin-top: 5%;
+    }
+
+    .btn {
+        margin-left: 5px;
+    }
+}
+

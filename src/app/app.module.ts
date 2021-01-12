@@ -11,11 +11,10 @@ import { AddNewMovieModalComponent } from './movies/add-new-movie-modal/add-new-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AboutComponent } from './about/about.component';
-import { ReviewsItemComponent } from './reviews/reviews-list/reviews-item/reviews-item.component';
+import { ReviewsItemComponent } from './reviews/reviews-item/reviews-item.component';
 import { ControlMessagesComponent } from './control-messages/control-messages.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HideDirective } from './shared/hide-directive.directive';
-//import { ReviewsListComponent } from './reviews/reviews-list/reviews-list.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 
 @NgModule({
@@ -30,7 +29,6 @@ import { ReviewsComponent } from './reviews/reviews.component';
     ReviewsItemComponent,
     ControlMessagesComponent,
     HideDirective,
-    //ReviewsListComponent,
     ReviewsComponent
   ],
   imports: [
