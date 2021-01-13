@@ -16,6 +16,7 @@ import { ControlMessagesComponent } from './control-messages/control-messages.co
 import { HttpClientModule } from '@angular/common/http';
 import { HideDirective } from './shared/hide-directive.directive';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { ReviewSearchComponent } from './reviews/review-search/review-search.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ReviewsComponent } from './reviews/reviews.component';
     ReviewsItemComponent,
     ControlMessagesComponent,
     HideDirective,
-    ReviewsComponent
+    ReviewsComponent,
+    ReviewSearchComponent
   ],
   imports: [
     BrowserModule,

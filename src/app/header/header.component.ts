@@ -8,16 +8,13 @@ import { MovieService } from '../movies/movie.service.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  searchValue: string;
   movieData: Movie[];
 
-  constructor(private movieService: MovieService) { }
+  constructor() { }
 
   ngOnInit() {
   }
 
-  onSearchForReview() {
-    this.movieService.onReviewSearch(this.searchValue);
-  }
+ 
 
 }

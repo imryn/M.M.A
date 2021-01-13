@@ -1,8 +1,8 @@
 import { Component, HostBinding, Input, OnInit } from '@angular/core';
-import { ReviewService } from '../../../review.service';
-import { MovieService } from '../../../movies/movie.service.service';
+import { ReviewService } from '../../review.service';
+import { MovieService } from '../../movies/movie.service.service';
 import { Subscription } from 'rxjs';
-import { Review } from '../../review.typing';
+import { Review } from '../review.typing';
 
 @Component({
   selector: 'app-reviews-item',
@@ -42,5 +42,6 @@ export class ReviewsItemComponent implements OnInit {
     return review.multimedia != null ? review.multimedia.src :  ReviewsItemComponent.reviewPlaceholder;
   }
 
+  
 
 }
