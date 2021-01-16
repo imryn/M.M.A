@@ -1,3 +1,5 @@
+$basic_font_size: 16px;
+
 form .inner-form {
     display: -ms-flexbox;
     display: flex;
@@ -23,7 +25,7 @@ form .inner-form .input-field input {
     display: block;
     width: 100%;
     padding: 10px 0;
-    font-size: 16px;
+    font-size: $basic_font_size;
     color: #000;
 }
 
@@ -52,7 +54,7 @@ input {
     height: 100%;
     width: 100%;
     white-space: nowrap;
-    font-size: 16px;
+    font-size: $basic_font_size;
     color: #fff;
     border: 0;
     cursor: pointer;
@@ -69,17 +71,7 @@ input {
 
 form .inner-form .input-field input.placeholder {
     color: #222;
-    font-size: 16px;
-  }
-  
-  form .inner-form .input-field input:-moz-placeholder {
-    color: #222;
-    font-size: 16px;
-  }
-  
-  form .inner-form .input-field input::-webkit-input-placeholder {
-    color: #222;
-    font-size: 16px;
+    font-size: $basic_font_size;
   }
   
   form .inner-form .input-field input:hover, .s130 form .inner-form .input-field input:focus {

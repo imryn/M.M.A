@@ -20,7 +20,7 @@ export class ReviewsItemComponent implements OnInit {
     this.onSearchSubscription = this.movieService.onSearch.subscribe(this.getReviewFromApi.bind(this));
   }
 
-  getReviewFromApi(searchWord?) {
+  getReviewFromApi(searchWord ='spider-man') {
     this.reviewService.getReviewFromApi(searchWord).subscribe((response: any) => {
       if (response.status === 'OK') {
         this.error = '';
