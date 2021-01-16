@@ -4,7 +4,7 @@ import { FormBuilder, Validators, FormGroup, FormControl } from '@angular/forms'
 import { Movie } from '../movie.modle';
 import { Observable} from 'rxjs';
 import { MovieService } from '../movie.service.service';
-import { ValidationService } from '../../validation-service.service';
+import { ValidationService } from '../../shared/validation/validation-service.service';
 
 
 @Component({

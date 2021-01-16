@@ -1,5 +1,5 @@
-import { Component, HostBinding, Input, OnInit } from '@angular/core';
-import { ReviewService } from '../../review.service';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ReviewService } from '../review.service';
 import { MovieService } from '../../movies/movie.service.service';
 import { Subscription } from 'rxjs';
 import { Review } from '../review.typing';
@@ -9,7 +9,7 @@ import { Review } from '../review.typing';
   templateUrl: './reviews-item.component.html',
   styleUrls: ['./reviews-item.component.scss']
 })
-export class ReviewsItemComponent implements OnInit {
+export class ReviewsItemComponent implements OnInit, OnDestroy {
 
   reviews: Review[];
   error: string;
