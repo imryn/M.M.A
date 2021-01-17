@@ -8,7 +8,7 @@ Small movie app. Include 3 main processes:
     - year of production
     
 2. add new movie to list.
-3. you can see reviews of the new spider-man movie
+3. search review of a movie
 
 Developed with Angular 7 and used the "New York Times" API movies for getting the reviews.
 
