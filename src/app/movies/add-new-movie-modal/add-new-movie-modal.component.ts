@@ -1,4 +1,4 @@
-import { Component, OnInit,Input, Output, EventEmitter  } from '@angular/core';
+import { Component, OnInit,Input, Output, EventEmitter, ViewChild  } from '@angular/core';
 import { trigger, style, animate, transition } from '@angular/animations';
 import { FormBuilder, Validators, FormGroup, FormControl } from '@angular/forms';
 import { Movie } from '../movie.modle';
@@ -49,14 +49,14 @@ export class AddNewMovieModalComponent implements OnInit {
     this.visibleChange.emit(this.visible);
   }
 
-  onSubmit() {
+onSubmit() {
     this.dataSaved = false;
     const movie = this.newMovieForm.value;
     console.log(movie);
     this.addNewMovie(movie);
   }
 
-  addNewMovie(movie: Movie) {
+addNewMovie(movie: Movie) {
     if (this.newMovieForm !== null) {
       this.dataSaved = true;
       this.movieService.addNewMovie(movie);

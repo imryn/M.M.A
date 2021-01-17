@@ -11,10 +11,11 @@ import { AddNewMovieModalComponent } from './movies/add-new-movie-modal/add-new-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AboutComponent } from './about/about.component';
-import { ReviewsComponent } from './reviews/reviews.component';
+import { ReviewsItemComponent } from './reviews/reviews-item/reviews-item.component';
 import { ControlMessagesComponent } from './control-messages/control-messages.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { HideDirective } from './shared/hide-directive.directive';
+import { ReviewsComponent } from './reviews/reviews.component';
 
 @NgModule({
   declarations: [
@@ -25,8 +26,10 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     AddNewMovieModalComponent,
     AboutComponent,
-    ReviewsComponent,
-    ControlMessagesComponent
+    ReviewsItemComponent,
+    ControlMessagesComponent,
+    HideDirective,
+    ReviewsComponent
   ],
   imports: [
     BrowserModule,

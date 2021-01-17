@@ -1,0 +1,16 @@
+<div class="reviewsList">
+  <p class="error"> {{error}} </p>
+  <ul *ngIf="reviews" class="list-group" >
+        <li *ngFor="let review of reviews" class="list-group-item">
+            <img src="{{getReviewImg(review)}}" class="poster" />
+          <div class="review-info">
+              <div class="head-line">
+                <a href="{{review.link.url}}"> {{review.headline}} </a>  
+              </div>
+              <div class="reviewer"> Written By {{review.byline}} </div>
+              <div class="summary_short"> {{review.summary_short}} </div>
+              <div> {{review.type}}</div>
+          </div>
+        </li>
+  </ul>
+</div>

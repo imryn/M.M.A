@@ -11,18 +11,19 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-            <li><a routerLink="/"> home </a></li>
-            <li><a routerLink="/about" title="not implemented"> about </a></li>
-            <li><a routerLink="/reviews"> Reviews </a></li>
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/"> home </a></li>
+            <li routerLinkActive="active"><a routerLink="/about" title="not implemented"> about </a></li>
+            <li routerLinkActive="active"><a routerLink="/reviews"> Reviews </a></li>
       </ul>
+  
+    </div>
       <form class="navbar-form navbar-left" (ngSubmit)="onSearchForReview()">
         <div class="form-group">
           <input type="text" class="form-control search__input" placeholder="Search"  name="search__movie" 
-           #search__input = "ngModel"  [(ngModel)]="searchValue" />
+          #search__input = "ngModel"  [(ngModel)]="searchValue" />
         </div>
         <input type="submit" class="btn btn-default" value="Search" ng-model="movies-list"/> 
-      </form>
-    </div><!-- /.navbar-collapse -->  
-  </div><!-- /.container-fluid -->
+      </form> 
+  </div>
 </nav>
 

@@ -1,13 +1,1 @@
-<div class="moviesList">
-  <p class="error"> {{error}} </p>
-  <ul *ngIf="movies" class="list-group">
-    <li *ngFor="let movie of movies" class="list-group-item">
-      <img src="{{movie.multimedia != null ? movie.multimedia.src :  moviePlaceholder}}" class="poster" />
-      <div class="movie-info">
-        <div class="head-line">{{movie.headline}}</div>
-        <div class="reviewer"> Written By {{movie.byline}} </div>
-        <div class="summary_short"> {{movie.summary_short}}</div>
-      </div>
-    </li>
-  </ul>
-</div>
+<app-reviews-item> </app-reviews-item>

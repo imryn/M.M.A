@@ -5,7 +5,8 @@ import { AboutComponent } from '../app/about/about.component';
 import { ReviewsComponent } from '../app/reviews/reviews.component';
 
 const routes: Routes = [
-  {path: '', component: MoviesComponent },
+  {path: '', redirectTo: '/movies', pathMatch: 'full' },
+  {path: 'movies', component: MoviesComponent},
   {path: 'about', component: AboutComponent },
   {path: 'reviews', component: ReviewsComponent }
 ];

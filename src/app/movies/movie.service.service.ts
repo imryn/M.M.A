@@ -8,7 +8,7 @@ import { Subject } from 'rxjs';
 export class MovieService {
 
   private movies: Movie[] = [
-    new Movie('Harry Potter And The Goblet Of Fire', 2011, 'https://lh3.googleusercontent.com/k235-2W-gJ435FLcO_fy4x4P8Wb3TJ6R3lgmvdzOTm23adyOSb155VKrmXEXonkj8bXy',
+    new Movie('Harry Potter And The Goblet Of Fire', 2011, 'https://vignette.wikia.nocookie.net/harrypotter/images/2/2c/Goblet_of_Fire_Film_Poster.jpg/revision/latest?cb=20140817011104',
       `The fourth movie in the Harry Potter franchise sees Harry (Daniel Radcliffe) returning for his fourth year at Hogwarts School
      of Witchcraft and Wizardry, along with his friends, Ron (Rupert Grint) and Hermione (Emma Watson). There is an upcoming
      tournament between the three major schools of magic, with one participant selected from each school by the Goblet of Fire.
