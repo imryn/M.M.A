@@ -6,17 +6,18 @@ import { ValidationError } from './validation.enum';
 })
 export class ValidationService {
 
-  constructor(private validationError: ValidationError) { }
+  static config = {
+    [ValidationError.required]: 'Required',
+    [ValidationError.invalidImageLink]: 'The link should include jpg/gif/png',
+    [ValidationError.invalidDate]: 'The year should be before / equal to current year',
+    [ValidationError.invalidText]: 'Too much characters in the summary'
+};
+  constructor() { }
 
     static getValidatorErrorMessage(validatorName: string) {
-      const config = {
-          [ValidationError.required]: 'Required',
-          [ValidationError.invalidImageLink]: 'The link should include jpg/gif/png',
-          [ValidationError.invalidDate]: 'The year should be before / equal to current year',
-          [ValidationError.invalidText]: 'Too much characters in the summary'
-      };
+      
 
-      return config[validatorName];
+      return ValidationService.config[validatorName];
     }
 
     static DateValidator(control) {
