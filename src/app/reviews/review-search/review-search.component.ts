@@ -6,14 +6,11 @@ import { MovieService } from 'src/app/movies/movie.service.service';
   templateUrl: './review-search.component.html',
   styleUrls: ['./review-search.component.scss']
 })
-export class ReviewSearchComponent implements OnInit {
+export class ReviewSearchComponent {
 
   searchValue: string;
 
   constructor(private movieService: MovieService) { }
-
-  ngOnInit(): void {
-  }
 
   onSearchForReview() {
     this.movieService.onReviewSearch(this.searchValue);

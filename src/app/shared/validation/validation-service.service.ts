@@ -12,40 +12,38 @@ export class ValidationService {
     [ValidationError.invalidDate]: 'The year should be before / equal to current year',
     [ValidationError.invalidText]: 'Too much characters in the summary'
 };
-  constructor() { }
 
-    static getValidatorErrorMessage(validatorName: string) {
+  static getValidatorErrorMessage(validatorName: string) {
       
+    return ValidationService.config[validatorName];
+  }
 
-      return ValidationService.config[validatorName];
+  static DateValidator(control) {
+    let date = new Date;
+
+    if (control.value >= 1950 && control.value <=  date.getFullYear() && control.value.length === 4) {
+      return null;
+
+    } else {
+        return { [ValidationError.invalidDate]: true };
     }
+  }
 
-    static DateValidator(control) {
-      let date = new Date;
+  static ImgValidator(control) {
+    if (control.value.match(/\.(jpg|gif|png)$/) != null) {
+      return null;
 
-      if (control.value >= 1950 && control.value <=  date.getFullYear() && control.value.length === 4) {
-        return null;
-
-      } else {
-          return { [ValidationError.invalidDate]: true };
-      }
+    } else {
+        return { [ValidationError.invalidImageLink]: true };
     }
+  }
 
-    static ImgValidator(control) {
-      if (control.value.match(/\.(jpg|gif|png)$/) != null) {
-        return null;
+  static TextValidator(control) {
+    if (control.value.length <= 300) {
+      return null;
 
-      } else {
-          return { [ValidationError.invalidImageLink]: true };
-      }
+    } else {
+        return {[ValidationError.invalidText]: true };
     }
-
-    static TextValidator(control) {
-      if (control.value.length <= 300) {
-        return null;
-
-      } else {
-          return {[ValidationError.invalidText]: true };
-      }
-    }
+  }
 }
