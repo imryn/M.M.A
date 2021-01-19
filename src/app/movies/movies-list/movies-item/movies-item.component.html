@@ -1,4 +1,6 @@
-<h4 class="list-group-item-heading"> {{movie.title}} </h4>
+<h4 class="list-group-item-heading" [title]="movie.title"> {{movie.title}} </h4>
 <p class="list-group-item-text"> {{movie.year}} </p>
-<img [src]="movie.imagePath" alt="recipe.name" class="img-responsive">
-<p class="summary"> {{movie.summary}} </p>
+<div class="movie-details"> 
+    <img [src]="movie.imagePath" alt="recipe.name" class="img-responsive">
+    <p class="summary"> {{movie.summary}} </p>
+</div>

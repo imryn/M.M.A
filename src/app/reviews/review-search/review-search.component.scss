@@ -1,12 +1,10 @@
 $basic_font_size: 16px;
 
 form .inner-form {
-    display: -ms-flexbox;
     display: flex;
     width: 100%;
     justify-content: space-between;
     -ms-flex-pack: justify;
-    -ms-flex-align: center;
     align-items: center;
     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
     border-radius: 34px;
@@ -80,28 +78,20 @@ form .inner-form .input-field input.placeholder {
   }
   
   form .inner-form .input-field.first-wrap {
-    -ms-flex-positive: 1;
-        flex-grow: 1;
-    display: -ms-flexbox;
+    flex-grow: 1;
     display: flex;
-    -ms-flex-align: center;
-        align-items: center;
     background: #D6EAF8;
   }
   
   form .inner-form .input-field.first-wrap input {
-    -ms-flex-positive: 1;
         flex-grow: 1;
   }
   
   form .inner-form .input-field.first-wrap .svg-wrapper {
     min-width: 80px;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: center;
-        justify-content: center;
-    -ms-flex-align: center;
-        align-items: center;
+    justify-content: center;
+    align-items: center;
   }
   
   form .inner-form .input-field.first-wrap svg {
@@ -129,6 +119,12 @@ form .inner-form .input-field input.placeholder {
     margin: 2% auto;
   }
 
+  .svg-wrapper {
+    background-image: url(../../shared/images/search-icon.svg);
+    background-repeat: no-repeat;
+    margin: 4% 0 0 4%;
+  }
+
   @media only screen and (max-width: 480px) {
 
     form {
@@ -140,9 +136,7 @@ form .inner-form .input-field input.placeholder {
         min-width: 40px;
         display: -ms-flexbox;
         display: flex;
-        -ms-flex-pack: center;
         justify-content: center;
-        -ms-flex-align: center;
         align-items: center;
         padding: 0 10px;
     }
@@ -154,4 +148,9 @@ form .inner-form .input-field input.placeholder {
     form .inner-form .input-field.second-wrap {
         min-width: 100px;
     }
+
+    .svg-wrapper {
+      margin: 5% 0 0 5%;
+    }
+
 }

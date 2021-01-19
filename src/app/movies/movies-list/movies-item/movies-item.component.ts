@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, HostBinding, Output, HostListener, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, HostBinding, Output, HostListener, EventEmitter, ViewChild } from '@angular/core';
 import { Movie } from '../../movie.modle';
 
 @Component({
@@ -20,10 +20,10 @@ export class MoviesItemComponent implements OnInit {
     this.select.emit(this.movie);
   }
 
-
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

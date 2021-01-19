@@ -19,7 +19,7 @@ export class ValidationService {
   }
 
   static DateValidator(control) {
-    let date = new Date;
+    const date = new Date;
 
     if (control.value >= 1950 && control.value <=  date.getFullYear() && control.value.length === 4) {
       return null;
