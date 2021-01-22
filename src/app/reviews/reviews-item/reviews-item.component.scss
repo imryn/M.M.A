@@ -25,7 +25,7 @@ $base-radius: 4px;
 }
 
 .head-line {
-    font-size: 32px;
+    font-size: 22px;
     font-weight: bold;
     text-align: center;
 }
@@ -46,9 +46,16 @@ $base-radius: 4px;
     height: 202px;
 }
 
+
+
 @media only screen and (max-width: 480px){
 
     .list-group {
         display: block;
     }
 }
+
+
+
+
+

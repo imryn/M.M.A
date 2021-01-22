@@ -14,8 +14,7 @@
 .navbar a,
 .navbar-toggle{
     text-transform: capitalize;
-    font-family: Lato;
-    font-weight: 300;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     color: white !important;
 }
 
@@ -23,16 +22,6 @@
 .navbar li:hover,
 .dropdown.open > a{
     color: #74b9ff !important;
-}
-
-.btn {
-    margin-left: 10px;
-    background-color: #74b9ff;
-    color: white;
-}
-
-.container-fluid {
-    display: flex;
 }
 
 

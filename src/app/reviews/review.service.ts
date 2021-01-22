@@ -11,7 +11,7 @@ export class ReviewService {
 
   constructor(private http: HttpClient) { }
 
-  getReviewFromApi(searchWord = 'spider-man') {
+  getReviewFromApi(searchWord) {
     return this.http.get(`${ReviewService.NY_TIMES_API}/svc/movies/v2/reviews/search.json
     ?query=${searchWord}&api-key=${ReviewService.API_KEY}`);
   }

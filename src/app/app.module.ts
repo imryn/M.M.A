@@ -14,8 +14,8 @@ import { AboutComponent } from './about/about.component';
 import { ReviewsItemComponent } from './reviews/reviews-item/reviews-item.component';
 import { ControlMessagesComponent } from './control-messages/control-messages.component';
 import { HttpClientModule } from '@angular/common/http';
-import { HideDirective } from './shared/hide-directive.directive';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { ReviewSearchComponent } from './reviews/review-search/review-search.component';
 
 @NgModule({
   declarations: [
@@ -28,8 +28,8 @@ import { ReviewsComponent } from './reviews/reviews.component';
     AboutComponent,
     ReviewsItemComponent,
     ControlMessagesComponent,
-    HideDirective,
-    ReviewsComponent
+    ReviewsComponent,
+    ReviewSearchComponent
   ],
   imports: [
     BrowserModule,

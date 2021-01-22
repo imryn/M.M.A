@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Movie } from '../movies/movie.modle';
 import { MovieService } from '../movies/movie.service.service';
 
@@ -8,16 +8,14 @@ import { MovieService } from '../movies/movie.service.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  searchValue: string;
   movieData: Movie[];
-
-  constructor(private movieService: MovieService) { }
+  isShown = false;
+  
+  constructor() { }
 
   ngOnInit() {
   }
 
-  onSearchForReview() {
-    this.movieService.onReviewSearch(this.searchValue);
-  }
+  
 
 }
